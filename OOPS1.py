@@ -80,8 +80,8 @@ cList.append(c1)
 cList.append(c2)
 
 name = "Nikhil Bhati"
-s.view_account_detials(name)
-c2.view_account_detials("Rishab Kumar")
+s.view_account_details(name)
+c2.view_account_details("Rishab Kumar")
 
 c2.__add__(s)
 
