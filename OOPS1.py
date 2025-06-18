@@ -15,7 +15,7 @@ class BankAccount (ABC):
     def withdraw(self , x ):
         pass
 
-    def Detials(self ):
+    def Details(self ):
         print("name: " , self.holder )
         print("Amount: " , self.amount)
     
@@ -32,10 +32,10 @@ class CurrentAccount (BankAccount): # inheritance
     def deposit(self , amount):
         self.amount += amount
 
-    def view_account_detials(self , holder_name ):
+    def view_account_details(self , holder_name ):
         print("Current Account Details: ")
         if(self.holder == holder_name):
-            self.Detials()
+            self.Details()
         else:
             print("No Account under this holder name")
 
@@ -60,10 +60,10 @@ class SavingsAccount(BankAccount):
     def deposit(self , amount):
         self.amount += amount
 
-    def view_account_detials(self , holder_name ):
+    def view_account_details(self , holder_name ):
         print("Savings Account Details: ")
         if(self.holder == holder_name):
-            self.Detials()
+            self.Details()
             print("interset given: ", self.interest , "%")
         else:
             print("No Account under this holder name")
