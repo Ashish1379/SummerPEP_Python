@@ -4,6 +4,9 @@
 # for declaring public variable -> self.variable
 from collections import defaultdict
 from abc import ABC , abstractmethod
+class InvalidTransactionException(Exception):
+    pass
+
 class BankAccount (ABC):
     def __init__(self , holder  , amount ):
         self.holder = holder
@@ -57,6 +60,8 @@ class SavingsAccount(BankAccount):
     def withdraw(self,  x): #method overriding and abstraction 
         if( x <= self.amount):
             self.amount -= x
+
+            
     def deposit(self , amount):
         self.amount += amount
 
